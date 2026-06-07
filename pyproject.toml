@@ -3,7 +3,7 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "rs-data-process"
+name = "remote-sensing-raster-tools"
 version = "0.1.0"
 description = "GeoTIFF tiling and stitching utilities for remote sensing imagery."
 readme = "README.md"
