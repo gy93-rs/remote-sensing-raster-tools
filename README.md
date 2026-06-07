@@ -1,11 +1,15 @@
-# data_process
+# remote-sensing-raster-tools
 
-`data_process` is a small Python toolkit for processing large remote sensing images, satellite imagery, and aerial imagery. It focuses on two practical GeoTIFF workflows:
+`remote-sensing-raster-tools` is a small Python toolkit for processing large remote sensing images, satellite imagery, and aerial imagery. It focuses on two practical GeoTIFF workflows:
 
 - splitting a large GeoTIFF into fixed-size raster tiles;
 - stitching those tiles back into a GeoTIFF mosaic.
 
-The project also keeps a simple image rotation helper from the original repository for compatibility.
+The installable Python package remains `data_process` for compatibility with the original repository. The project also keeps a simple image rotation helper from the original scripts.
+
+## Why This Project Matters
+
+Large remote sensing rasters are often too large for direct model training, manual inspection, lightweight data review, or simple processing pipelines. This project provides a focused, testable foundation for splitting and rebuilding GeoTIFF imagery while preserving geospatial metadata.
 
 ## Current Capabilities
 
@@ -126,10 +130,14 @@ Run the example below to generate a small synthetic GeoTIFF, split it into tiles
 python examples/minimal_geotiff_roundtrip.py
 ```
 
+## Roadmap
+
+See [ROADMAP.md](ROADMAP.md) for planned maintenance and feature work, including overlap tiles, Cloud Optimized GeoTIFF workflows, metadata validation, and better large-raster performance.
+
 ## Project Structure
 
 ```text
-data_process/
+remote-sensing-raster-tools/
   data_process/
     raster.py          # GeoTIFF tiling and stitching
     augmentation.py    # OpenCV image rotation helper
@@ -150,7 +158,7 @@ data_process/
 
 ## 中文说明
 
-本项目用于遥感影像、卫星影像和航空影像的基础数据处理，当前已经整理为可复用的 Python 模块和命令行工具。核心功能是 GeoTIFF 裁剪切片与拼接，并在测试中验证了裁剪后再拼接可以恢复原始影像数据、坐标系、仿射变换、分辨率和 NoData 信息。
+本项目用于遥感影像、卫星影像和航空影像的基础栅格数据处理。当前核心功能是 GeoTIFF 裁剪切片与拼接，并在测试中验证了裁剪后再拼接可以恢复原始影像数据、坐标系、仿射变换、分辨率和 NoData 信息。
 
 ## License
 
